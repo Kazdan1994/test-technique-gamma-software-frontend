@@ -9,6 +9,8 @@ import { CardModule } from 'primeng/card';
 import { FileUploadModule } from 'primeng/fileupload';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { MenubarModule } from 'primeng/menubar';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,8 @@ import { ToastModule } from 'primeng/toast';
     CardModule,
     TableModule,
     FileUploadModule,
+    MenubarModule,
+    NgOptimizedImage,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],
