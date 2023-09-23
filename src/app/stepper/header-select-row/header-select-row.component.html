@@ -1,0 +1,32 @@
+<section class="block-content">
+  <p-card>
+    <ng-template pTemplate="title">Select header row</ng-template>
+    <ng-template pTemplate="content">
+      <p-table [value]="data" [(selection)]="selectedRow" (onRowSelect)="onRowSelect($event)"
+               [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="body" let-rowData>
+          <tr>
+            <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
+            <td>{{ rowData['Nom du groupe'] }}</td>
+            <td>{{ rowData['Origine'] }}</td>
+            <td>{{ rowData['Ville'] }}</td>
+            <td>{{ rowData['Année début'] }}</td>
+            <td>{{ rowData['Année séparation'] }}</td>
+            <td>{{ rowData['Fondateurs'] }}</td>
+            <td>{{ rowData['Membres'] }}</td>
+            <td>{{ rowData['Courant musical'] }}</td>
+            <td>{{ rowData['Présentation'] }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </ng-template>
+  </p-card>
+  <p-toolbar class="mb-4 gap-2">
+    <ng-template pTemplate="left">
+      <p-button label="Prev" (onClick)="prevPage()" icon="pi pi-angle-right" iconPos="right"></p-button>
+    </ng-template>
+    <ng-template pTemplate="right">
+      <p-button label="Next" (onClick)="nextPage()" icon="pi pi-angle-right" iconPos="right"></p-button>
+    </ng-template>
+  </p-toolbar>
+</section>
